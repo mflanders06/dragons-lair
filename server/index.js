@@ -31,4 +31,4 @@ massive({
     console.log('Server connection successful!');
 });
 
-app.post('/api/register', authCtrl.register);
+app.post('/auth/register', authCtrl.register);
