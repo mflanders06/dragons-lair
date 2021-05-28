@@ -3,6 +3,7 @@ const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
 const authCtrl = require('./controllers/authController');
+const treasureCtrl = require('./controllers/treasureController')
 
 const app = express();
 
@@ -32,3 +33,5 @@ massive({
 });
 
 app.post('/auth/register', authCtrl.register);
+app.post('/auth/login', authCtrl.login);
+app.get('/auth/logout', authCtrl.logout);
